@@ -1,6 +1,6 @@
 /** @format */
 
-var arr = [
+ var arr = [
   { id: 1, name: "john", age: "18", marks: 80 },
   { id: 2, name: "jack", age: "20", marks: 85 },
   { id: 3, name: "karen", age: "19", marks: 35 },
@@ -8,22 +8,20 @@ var arr = [
 
 function PrintStudentswithMap() {
   //Write your code here , just console.log
-  var newArr=arr.map(item=>{
-    return{
-        id:item.id,
-        name:item.name,
-        age :item.age,
-        marks:item.marks
-      }
+  arr.map(item=>{
+   if(item.marks>=50)
+   console.log(item);
     })
-    console.log(newArr);
+    
 }
 
 function PrintStudentsbyForEach() {
   //Write your code here , just console.log
   var a =[];
-  a = arr.forEach((index) => {
-   console.log([`id:${index.id} name:${index.name} age:${index.age} marks:${index.marks}`]);
+  a = arr.forEach((item) => {
+    if(item.marks>=50)
+    console.log(item);
+  // console.log([`id:${index.id} name:${index.name} age:${index.age} marks:${index.marks}`]);
 });
 }
 
